@@ -1,7 +1,5 @@
 name: CI CD
 on: [push]
-env:
-    ARTNAME: art-name
 jobs:
     deploy:
          name: deploy python script
