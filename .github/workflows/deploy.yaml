@@ -1,10 +1,11 @@
-name: CI CD
+name: CI/CD
 on: [push]
-
+env:
+    ARTIFACTS: artifacts
 jobs:
     deploy:
-         name: deploy python script
-      runs-on: ubuntu-latest
+        name: deploy python script
+        runs-on: ubuntu-latest
         steps:
          - name: Checkout
            uses: actions/checkout@v3
@@ -13,8 +14,8 @@ jobs:
            run: python hello.py
 
     build:
-         name: building
-      runs-on: ubuntu-latest
+        name: building
+        runs-on: ubuntu-latest
         needs: [deploy]
         steps:
          - name: Checkout
