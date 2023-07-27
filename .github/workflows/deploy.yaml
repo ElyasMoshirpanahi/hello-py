@@ -1,7 +1,7 @@
 name: CI/CD
 on: [push]
 env:
-    ARTIFACTS: artifacts
+    ARTNAME: artifacts
 jobs:
     deploy:
         name: deploy python script
